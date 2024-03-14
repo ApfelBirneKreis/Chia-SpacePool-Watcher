@@ -25,7 +25,7 @@ use_discord_notifications = True
 webhook = DiscordWebhook(url="<your webhook url here>", content="Farm has been restarted due to lack of partials! There could have been an issue. Please check your farmer.")
 
 #-Restarting Command:
-restart_farmer = os.popen("docker restart machinaris-gigahorse")
+restart_farmer = os.popen("docker restart machinaris-gigahorse") #use your own command to restart farmer or system
 
 #-Pool: (only set your used Pool to true! Only one true is allowed!)
 
