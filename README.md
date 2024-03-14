@@ -7,11 +7,12 @@ If the partial is older than a set ammount of minutes it autorestarts your farm.
 
 Currently it only works with the machinaris container on unraid but can be adapted to work with almost everything
 
-On unraid you need two modules + python itself installed:
+On unraid you need two modules + python itself and the user.scripts plugin installed:
 
 To install the modules use:
 - pip install requests
 - pip install discord-webhook
 
+To call the script use the userscript plugin on Unraid. mine runs every 10mins with a Cronjob.
 
 Also a weebhook can be configured to send a notification if your farm gets restarted.
