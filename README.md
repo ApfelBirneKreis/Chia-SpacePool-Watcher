@@ -1,4 +1,6 @@
-This Script uses the Spacepool api to check for your latest partial you sent to the pool.
+POOLS SUPPORTED: SpacePool, Spacefarmers.io
+
+This Script uses the Spacepool or Spacefarmer api to check for your latest partial you sent to the pool.
 If the partial is older than a set ammount of minutes it autorestarts your farm.
 
 - ![image](https://github.com/ApfelBirneKreis/Chia-SpacePool-Watcher/assets/84158946/cd3c18f3-0c55-4dcf-8a6e-2225595b2368)
