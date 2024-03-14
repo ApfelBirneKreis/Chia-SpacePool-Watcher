@@ -14,15 +14,15 @@ from discord_webhook import DiscordWebhook
 #-----------------------------------------------------------------------------------------------------------------
 #Configuration:
 #-Pool API:
-url = "https://developer.pool.space/api/v1/farms/0x121c0b7a6a4dfebd5ece1e82ec18c419435e65b8ac23329a1869d354a62e030f/partials"
+url = "<your api url here>"
 headers = {
     "accept": "application/json",
-    "Developer-Key": "BVKe3qW6ddZBiu9hJRKn67Ah4ZQxArG3lT6LODJF4gObaOlOX7J3SMdwg97jJK2l",  #comment out when using Spacefarmers
+    "Developer-Key": "<your dev key here",  #comment out when using Spacefarmers
     "User-Agent": "Farmer_Check"
 }
 #-Discord Webhook:
 use_discord_notifications = True
-webhook = DiscordWebhook(url="https://discord.com/api/webhooks/1214684986767183872/MBKsTzhD8Tb70S72iNwVcD-CZFmFuuC_HnYwLxMLymWRqayuoTchkj9U3vq5atKc5d_n", content="Farm has been restarted due to lack of partials! There could have been an issue. Please check your farmer.")
+webhook = DiscordWebhook(url="<your webhook url here>", content="Farm has been restarted due to lack of partials! There could have been an issue. Please check your farmer.")
 
 #-Restarting Command:
 restart_farmer = os.popen("docker restart machinaris-gigahorse")
