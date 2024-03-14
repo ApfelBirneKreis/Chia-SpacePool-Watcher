@@ -91,15 +91,18 @@ def get_last_partial():
     return temp
 
 def check_pool_ping():
-    hostname = "v2.spacefarmers.io"
-    response = os.system("ping -c 1 " + hostname)
-    # and then check the response...
-    if response == 0:
-        pingstatus = "Network Active"
-    else:
-        pingstatus = "Network Error"
-    
-    return pingstatus
+
+    with open(os.devnull, 'w') as DEVNULL:
+        try:
+            subprocess.check_call(
+                ['ping', '-c', '3', 'developer.pool.space'],
+                stdout=DEVNULL,  # suppress output
+                stderr=DEVNULL
+            )
+            is_up = True
+        except subprocess.CalledProcessError:
+            is_up = False
+    return is_up
 
 if __name__ == "__main__":
     main()
