@@ -41,7 +41,7 @@ def main():
     if elapsed > timedelta(minutes=60) and pingstatus == "Network Active":
         logging.info("-> Farm anomaly detected!")
         logging.info("-> Last partial was sent " + str(elapsed) + " ago! Restarting farmer!")
-        #os.popen("docker restart machinaris-gigahorse")
+        os.popen("docker restart machinaris-gigahorse")
 
         #setup Discord webhook notifications, comment out if not used
         webhook = DiscordWebhook(url="<WEBHOOK URL HERE>", content="Farm has been restarted due to lack of partials! There could have been an issue. Please check your farmer.")
